@@ -46,7 +46,7 @@ try{
    })
 }
 finally{
-
+// comment
 }
 }
 run().catch(console.dir);
