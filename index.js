@@ -31,6 +31,11 @@ try{
        const query = {_id:ObjectId(id)};
        const stock = await stockCollection.findOne(query);
        res.send(stock);
+   });
+   app.post('/stock',async(req,res)=>{
+       const newStock = req.body;
+       const result = await stockCollection.insertOne(newStock);
+       res.send(result);
    })
 }
 finally{
